@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>NovaVigil - AI-powered Literature Surveillance</title>
-  <link rel="icon" type="image/x-icon" href="images/Noteiqfavicon.png">
   <style>
     :root{
       --primary: #1a9f70;
@@ -49,14 +48,14 @@
     #trust{background:linear-gradient(180deg, var(--primary-600), var(--primary));color:var(--white);padding:48px 0;}
     .trust-split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;max-width:var(--max-width);margin:0 auto;padding:24px 20px;}
     .trust-left{display:flex;align-items:center;justify-content:center;}
-    .trust-image-card{width:100%;border-radius:14px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.12);border:1px solid rgba(255,255,255,0.06);aspect-ratio:16/10;}
+    .trust-image-card{width:100%;border-radius:14px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.12);border:1px solid rgba(255,255,255,0.06);aspect-ratio:16/10;background:#f0f4f3;}
     .trust-image-card img{width:100%;height:100%;object-fit:contain;display:block;}
     .trust-right{display:flex;align-items:center;justify-content:center;}
     .trust-card{background:#ffffff;color:#172a27;padding:32px 36px;border-radius:18px;width:100%;box-shadow:0 12px 36px rgba(0,0,0,0.12);}
     .trust-card h3{margin:0 0 14px 0;font-size:22px;color:#0f2b24;font-weight:700;}
     .trust-list{list-style:none;padding:0;margin:8px 0 0 0;}
     .trust-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px;font-size:1.05rem;color:#2c3b3a;}
-    .trust-list .star{font-size:1.4rem;color:#f7c200;flex-shrink:0;}
+    .check{font-size:1.4rem;color:#1a9f70;flex-shrink:0;font-weight:700;}
     .trust-card p{margin:12px 0 0 0;color:#2f3f3d;font-size:0.98rem;}
     #more-about{background:#ffffff;color:#000;}
     #more-about-heading{text-align:center;margin-bottom:32px;font-size:32px;font-weight:700;}
@@ -67,7 +66,7 @@
     .advantages-title,.modules-title{margin-top:0;font-size:22px;color:#0f2b24;font-weight:700;margin-bottom:18px;}
     .advantages-list{list-style:none;padding:0;margin:0;}
     .advantages-list li{display:flex;gap:12px;margin-bottom:14px;font-size:1rem;color:#2c3b3a;align-items:flex-start;}
-    .star{font-size:1.3rem;color:#f7c200;flex-shrink:0;}
+    .bullet{font-size:1.3rem;color:#1a9f70;flex-shrink:0;font-weight:700;}
     .module-tabs{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
     .module-tab{padding:10px 18px;border-radius:8px;border:1px solid #ccc;background:#f7f7f7;cursor:pointer;font-weight:600;transition:all .2s ease;flex:1;text-align:center;min-width:120px;}
     .module-tab.active{background:var(--primary);color:white;border-color:var(--primary-600);}
@@ -132,13 +131,13 @@
   <header>
     <div class="header-inner">
       <a href="https://arcolab.com/products/novavigil" class="logo">
-        <div class="partner-logo-wrapper">
-          <img class="logo-img" src="images/NovaVigil.png" alt="NovaVigil logo">
+        <div class="partner-logo-wrapper" style="background:#1a9f70;padding:8px 12px;">
+          <span style="color:white;font-weight:700;font-size:1.1rem;">NovaVigil</span>
         </div>
       </a>
       <a href="https://arcolab.com/" class="logo">
-        <div class="partner-logo-wrapper">
-          <img class="logo-img" src="images/logoArcolab.png" alt="Arcolab logo">
+        <div class="partner-logo-wrapper" style="background:#0f6b49;padding:8px 12px;">
+          <span style="color:white;font-weight:700;font-size:1.1rem;">Arcolab</span>
         </div>
       </a>
     </div>
@@ -184,8 +183,16 @@
             <p class="cta-text">Schedule your personalized demo.</p>
           </div>
           <div class="form-wrap">
-            <div id="fs-form-root">
-              <script src="https://arco-lab.myfreshworks.com/crm/sales/web_forms/2bd2509a7e16f4e8cbd7b953ae3f8e824d5e574d07bb9581ec1798103bc08f57/form.js" crossorigin="anonymous"></script>
+            <div id="fs-form-root" style="padding:20px;background:#f9fafb;border-radius:8px;text-align:center;">
+              <h3 style="color:#0f2b24;margin:0 0 16px 0;">Request a Demo</h3>
+              <p style="color:#666;font-size:0.9rem;margin-bottom:20px;">Fill in your details and we'll be in touch</p>
+              <div style="text-align:left;">
+                <input type="text" placeholder="Full Name" style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+                <input type="email" placeholder="Work Email" style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+                <input type="text" placeholder="Company" style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+                <input type="text" placeholder="Job Title" style="width:100%;padding:12px;margin-bottom:16px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+                <button style="width:100%;padding:14px;background:#1a9f70;color:white;border:none;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;">Schedule Demo</button>
+              </div>
             </div>
           </div>
         </div>
@@ -194,8 +201,12 @@
     <section id="trust">
       <div class="trust-split">
         <div class="trust-left">
-          <div class="trust-image-card">
-            <img src="images/screenshots/novavigil-dashboard.png" alt="NovaVigil Dashboard" />
+          <div class="trust-image-card" style="display:flex;align-items:center;justify-content:center;background:#e8f5f0;">
+            <div style="text-align:center;padding:40px;">
+              <div style="font-size:3rem;margin-bottom:10px;">📊</div>
+              <p style="color:#0f2b24;font-weight:600;">NovaVigil Dashboard</p>
+              <p style="color:#666;font-size:0.85rem;">Literature Case Management</p>
+            </div>
           </div>
         </div>
         <div class="trust-right">
@@ -218,9 +229,9 @@
           <div class="advantages-card">
             <h3 class="advantages-title">Measurable Business Impact</h3>
             <ul class="advantages-list">
-              <li><span class="bullet">•</span> From 3 hours to under 1 hour per case. Meet tight deadlines without the overtime.</li>
-              <li><span class="bullet">•</span> 50% reduction in manual effort while maintaining the necessary >95% accuracy requirement.</li>
-              <li><span class="bullet">•</span> Complete compliance audit readiness with full traceability.</li>
+              <li><span class="check">✓</span> From 3 hours to under 1 hour per case. Meet tight deadlines without the overtime.</li>
+              <li><span class="check">✓</span> 50% reduction in manual effort while maintaining the necessary >95% accuracy requirement.</li>
+              <li><span class="check">✓</span> Complete compliance audit readiness with full traceability.</li>
             </ul>
           </div>
           <div class="modules-card">
